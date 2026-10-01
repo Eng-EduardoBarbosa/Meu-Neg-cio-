@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
+    >
+
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self' 'unsafe-inline';
+            style-src 'self';
+            img-src 'self' data:;
+            font-src 'self';
+            connect-src 'self';
+            object-src 'none';
+            base-uri 'self';
+            form-action 'self';
+        "
+    >
+
+    <title>Meu Negócio | Acesso</title>
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+</head>
+
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-left">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                M
+            </div>
+
+            <div>
+
+                <h2>
+                    Meu Negócio
+                </h2>
+
+                <span>
+                    Controle financeiro
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="login-content">
+
+            <span class="welcome">
+                GESTÃO INTELIGENTE
+            </span>
+
+            <h1>
+                Tenha controle.
+                <span>
+                    Faça seu negócio crescer.
+                </span>
+            </h1>
+
+            <p>
+                Organize suas receitas, despesas e resultados
+                em um único lugar.
+            </p>
+
+
+            <div class="login-benefits">
+
+                <div>
+                    <strong>✓</strong>
+                    Controle financeiro simples
+                </div>
+
+                <div>
+                    <strong>✓</strong>
+                    Acompanhe seus resultados
+                </div>
+
+                <div>
+                    <strong>✓</strong>
+                    Tome decisões com mais informação
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="login-footer">
+            © 2026 Meu Negócio
+        </div>
+
+    </div>
+
+
+
+    <div class="login-right">
+
+        <div class="login-box">
+
+
+            <div class="mobile-brand">
+
+                <div class="brand-icon">
+                    M
+                </div>
+
+                <h2>
+                    Meu Negócio
+                </h2>
+
+            </div>
+
+
+            <div class="form-header">
+
+                <h2 id="formTitle">
+                    Bem-vindo de volta!
+                </h2>
+
+                <p id="formSubtitle">
+                    Entre na sua conta para continuar.
+                </p>
+
+            </div>
+
+
+
+            <!-- LOGIN -->
+
+            <form
+                id="loginForm"
+                autocomplete="on"
+            >
+
+                <div class="input-group">
+
+                    <label for="loginEmail">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        name="email"
+                        placeholder="seu@email.com"
+                        autocomplete="email"
+                        maxlength="254"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="loginPassword">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        name="password"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        minlength="8"
+                        maxlength="128"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="main-button"
+                >
+                    Entrar
+                </button>
+
+            </form>
+
+
+
+            <!-- CADASTRO -->
+
+            <form
+                id="registerForm"
+                class="hidden"
+                autocomplete="on"
+            >
+
+                <div class="input-group">
+
+                    <label for="registerName">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        name="name"
+                        placeholder="Seu nome"
+                        autocomplete="name"
+                        minlength="2"
+                        maxlength="80"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="registerEmail">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="seu@email.com"
+                        autocomplete="email"
+                        maxlength="254"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="registerPassword">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        name="password"
+                        placeholder="Crie uma senha"
+                        autocomplete="new-password"
+                        minlength="8"
+                        maxlength="128"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="registerConfirmPassword">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerConfirmPassword"
+                        name="confirmPassword"
+                        placeholder="Digite novamente"
+                        autocomplete="new-password"
+                        minlength="8"
+                        maxlength="128"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="main-button"
+                >
+                    Criar minha conta
+                </button>
+
+            </form>
+
+
+
+            <div
+                id="message"
+                class="message"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+
+
+            <div class="switch-form">
+
+                <span id="switchText">
+                    Ainda não possui uma conta?
+                </span>
+
+                <button
+                    id="switchButton"
+                    type="button"
+                >
+                    Criar conta
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+"use strict";
+
+
+/* =========================
+   CONFIGURAÇÕES
+========================= */
+
+const USERS_KEY = "meuNegocioUsers";
+
+const SESSION_KEY = "meuNegocioLoggedUser";
+
+const PASSWORD_ITERATIONS = 310000;
+
+const SESSION_DURATION = 2 * 60 * 60 * 1000;
+
+
+
+/* =========================
+   ELEMENTOS
+========================= */
+
+const loginForm =
+    document.getElementById("loginForm");
+
+const registerForm =
+    document.getElementById("registerForm");
+
+
+const loginEmail =
+    document.getElementById("loginEmail");
+
+const loginPassword =
+    document.getElementById("loginPassword");
+
+
+const registerName =
+    document.getElementById("registerName");
+
+const registerEmail =
+    document.getElementById("registerEmail");
+
+const registerPassword =
+    document.getElementById("registerPassword");
+
+const registerConfirmPassword =
+    document.getElementById("registerConfirmPassword");
+
+
+const message =
+    document.getElementById("message");
+
+
+const switchButton =
+    document.getElementById("switchButton");
+
+const switchText =
+    document.getElementById("switchText");
+
+
+const formTitle =
+    document.getElementById("formTitle");
+
+const formSubtitle =
+    document.getElementById("formSubtitle");
+
+
+
+/* =========================
+   STORAGE
+========================= */
+
+function readUsers() {
+
+    try {
+
+        const raw =
+            localStorage.getItem(USERS_KEY);
+
+        if (!raw) {
+            return [];
+        }
+
+        const users =
+            JSON.parse(raw);
+
+        if (!Array.isArray(users)) {
+            return [];
+        }
+
+        return users;
+
+    } catch (error) {
+
+        console.error(
+            "Não foi possível ler as contas.",
+            error
+        );
+
+        return [];
+    }
+}
+
+
+
+function saveUsers(users) {
+
+    localStorage.setItem(
+        USERS_KEY,
+        JSON.stringify(users)
+    );
+
+}
+
+
+
+/* =========================
+   UTILITÁRIOS
+========================= */
+
+function normalizeEmail(email) {
+
+    return String(email)
+        .trim()
+        .toLowerCase();
+
+}
+
+
+
+function showMessage(text, type = "") {
+
+    message.textContent = text;
+
+    message.className =
+        type
+            ? `message ${type}`
+            : "message";
+
+}
+
+
+
+function isValidEmail(email) {
+
+    if (
+        typeof email !== "string" ||
+        email.length > 254
+    ) {
+        return false;
+    }
+
+    /*
+       CORRIGIDO:
+       antes havia **\.**
+    */
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        .test(email);
+
+}
+
+
+
+function isValidName(name) {
+
+    return (
+        typeof name === "string" &&
+        name.length >= 2 &&
+        name.length <= 80
+    );
+
+}
+
+
+
+function isValidPassword(password) {
+
+    return (
+        typeof password === "string" &&
+        password.length >= 8 &&
+        password.length <= 128
+    );
+
+}
+
+
+
+/* =========================
+   ID DO USUÁRIO
+========================= */
+
+function generateUserId() {
+
+    if (
+        typeof crypto !== "undefined" &&
+        typeof crypto.randomUUID === "function"
+    ) {
+
+        return crypto.randomUUID();
+
+    }
+
+
+    return (
+        `${Date.now()}-` +
+        `${Math.random()
+            .toString(36)
+            .slice(2)}`
+    );
+
+}
+
+
+
+/* =========================
+   SALT
+========================= */
+
+function generateSalt() {
+
+    const salt =
+        new Uint8Array(16);
+
+
+    if (
+        typeof crypto === "undefined" ||
+        typeof crypto.getRandomValues !== "function"
+    ) {
+
+        throw new Error(
+            "Web Crypto não está disponível neste navegador."
+        );
+
+    }
+
+
+    crypto.getRandomValues(salt);
+
+    return salt;
+
+}
+
+
+
+/* =========================
+   BASE64
+========================= */
+
+function arrayBufferToBase64(buffer) {
+
+    const bytes =
+        new Uint8Array(buffer);
+
+    let binary = "";
+
+    for (const byte of bytes) {
+
+        binary +=
+            String.fromCharCode(byte);
+
+    }
+
+    return btoa(binary);
+
+}
+
+
+
+function base64ToUint8Array(base64) {
+
+    const binary =
+        atob(base64);
+
+    const bytes =
+        new Uint8Array(binary.length);
+
+
+    for (
+        let index = 0;
+        index < binary.length;
+        index++
+    ) {
+
+        bytes[index] =
+            binary.charCodeAt(index);
+
+    }
+
+
+    return bytes;
+
+}
+
+
+
+/* =========================
+   HASH DA SENHA
+========================= */
+
+async function hashPassword(
+    password,
+    salt,
+    iterations = PASSWORD_ITERATIONS
+) {
+
+    if (
+        typeof crypto === "undefined" ||
+        !crypto.subtle
+    ) {
+
+        throw new Error(
+            "Web Crypto API não está disponível."
+        );
+
+    }
+
+
+    const encoder =
+        new TextEncoder();
+
+
+    const passwordData =
+        encoder.encode(password);
+
+
+    const keyMaterial =
+        await crypto.subtle.importKey(
+            "raw",
+            passwordData,
+            {
+                name: "PBKDF2"
+            },
+            false,
+            [
+                "deriveBits"
+            ]
+        );
+
+
+    const hash =
+        await crypto.subtle.deriveBits(
+            {
+                name: "PBKDF2",
+                salt: salt,
+                iterations: iterations,
+                hash: "SHA-256"
+            },
+            keyMaterial,
+            256
+        );
+
+
+    return arrayBufferToBase64(hash);
+
+}
+
+
+
+/* =========================
+   COMPARAÇÃO
+========================= */
+
+function secureCompare(first, second) {
+
+    if (
+        typeof first !== "string" ||
+        typeof second !== "string"
+    ) {
+
+        return false;
+
+    }
+
+
+    if (
+        first.length !== second.length
+    ) {
+
+        return false;
+
+    }
+
+
+    let result = 0;
+
+
+    for (
+        let index = 0;
+        index < first.length;
+        index++
+    ) {
+
+        result |=
+            first.charCodeAt(index) ^
+            second.charCodeAt(index);
+
+    }
+
+
+    return result === 0;
+
+}
+
+
+
+/* =========================
+   SESSÃO
+========================= */
+
+function createSession(user) {
+
+    const session = {
+
+        id:
+            String(user.id),
+
+        name:
+            typeof user.name === "string"
+                ? user.name.slice(0, 80)
+                : "Usuário",
+
+        email:
+            normalizeEmail(user.email),
+
+        expiresAt:
+            Date.now() +
+            SESSION_DURATION
+
+    };
+
+
+    sessionStorage.setItem(
+        SESSION_KEY,
+        JSON.stringify(session)
+    );
+
+}
+
+
+
+/* =========================
+   CADASTRO
+========================= */
+
+registerForm.addEventListener(
+    "submit",
+    async event => {
+
+        event.preventDefault();
+
+        showMessage("");
+
+
+        const name =
+            registerName.value.trim();
+
+
+        const email =
+            normalizeEmail(
+                registerEmail.value
+            );
+
+
+        const password =
+            registerPassword.value;
+
+
+        const confirmPassword =
+            registerConfirmPassword.value;
+
+
+
+        /* NOME */
+
+        if (!isValidName(name)) {
+
+            showMessage(
+                "O nome deve ter entre 2 e 80 caracteres.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        /* E-MAIL */
+
+        if (!isValidEmail(email)) {
+
+            showMessage(
+                "Digite um e-mail válido.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        /* SENHA */
+
+        if (!isValidPassword(password)) {
+
+            showMessage(
+                "A senha deve ter entre 8 e 128 caracteres.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        /* CONFIRMAÇÃO */
+
+        if (
+            password !== confirmPassword
+        ) {
+
+            showMessage(
+                "As senhas não coincidem.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        /* USUÁRIOS */
+
+        const users =
+            readUsers();
+
+
+        const existingUser =
+            users.find(
+                user =>
+                    typeof user.email === "string" &&
+                    normalizeEmail(user.email) === email
+            );
+
+
+        if (existingUser) {
+
+            showMessage(
+                "Este e-mail já possui uma conta.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        try {
+
+            /* SALT */
+
+            const salt =
+                generateSalt();
+
+
+            /* HASH */
+
+            const passwordHash =
+                await hashPassword(
+                    password,
+                    salt,
+                    PASSWORD_ITERATIONS
+                );
+
+
+
+            /* NOVO USUÁRIO */
+
+            const newUser = {
+
+                id:
+                    generateUserId(),
+
+                name:
+                    name,
+
+                email:
+                    email,
+
+                passwordHash:
+                    passwordHash,
+
+                passwordSalt:
+                    arrayBufferToBase64(salt),
+
+                passwordIterations:
+                    PASSWORD_ITERATIONS,
+
+                createdAt:
+                    new Date().toISOString()
+
+            };
+
+
+
+            users.push(newUser);
+
+
+            saveUsers(users);
+
+
+
+            /* LIMPA SENHAS */
+
+            registerPassword.value = "";
+
+            registerConfirmPassword.value = "";
+
+
+
+            showMessage(
+                "Conta criada com sucesso! Você já pode entrar.",
+                "success"
+            );
+
+
+
+            /*
+               Depois de cadastrar,
+               volta para o login.
+            */
+
+            setTimeout(
+                () => {
+
+                    switchToLogin();
+
+                    loginEmail.value =
+                        email;
+
+                    loginPassword.focus();
+
+                },
+                700
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Erro ao criar conta.",
+                error
+            );
+
+
+            showMessage(
+                "Não foi possível criar a conta. Tente novamente.",
+                "error"
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =========================
+   LOGIN
+========================= */
+
+loginForm.addEventListener(
+    "submit",
+    async event => {
+
+        event.preventDefault();
+
+        showMessage("");
+
+
+        const email =
+            normalizeEmail(
+                loginEmail.value
+            );
+
+
+        const password =
+            loginPassword.value;
+
+
+
+        /* E-MAIL */
+
+        if (!isValidEmail(email)) {
+
+            showMessage(
+                "Digite um e-mail válido.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        /* SENHA */
+
+        if (!isValidPassword(password)) {
+
+            showMessage(
+                "A senha deve ter entre 8 e 128 caracteres.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        /* BUSCA USUÁRIO */
+
+        const users =
+            readUsers();
+
+
+        const user =
+            users.find(
+                item =>
+                    typeof item.email === "string" &&
+                    normalizeEmail(item.email) === email
+            );
+
+
+
+        if (!user) {
+
+            showMessage(
+                "E-mail ou senha incorretos.",
+                "error"
+            );
+
+            return;
+        }
+
+
+
+        try {
+
+            let passwordValid = false;
+
+
+
+            /*
+               USUÁRIO COM SENHA HASH
+            */
+
+            if (
+                typeof user.passwordHash === "string" &&
+                typeof user.passwordSalt === "string"
+            ) {
+
+                const salt =
+                    base64ToUint8Array(
+                        user.passwordSalt
+                    );
+
+
+                const iterations =
+                    Number.isInteger(
+                        Number(
+                            user.passwordIterations
+                        )
+                    )
+                        ? Number(
+                            user.passwordIterations
+                        )
+                        : PASSWORD_ITERATIONS;
+
+
+                const calculatedHash =
+                    await hashPassword(
+                        password,
+                        salt,
+                        iterations
+                    );
+
+
+                passwordValid =
+                    secureCompare(
+                        calculatedHash,
+                        user.passwordHash
+                    );
+
+            }
+
+
+
+            /*
+               COMPATIBILIDADE COM CONTAS ANTIGAS
+            */
+
+            else if (
+                typeof user.password === "string"
+            ) {
+
+                passwordValid =
+                    secureCompare(
+                        user.password,
+                        password
+                    );
+
+
+                /*
+                   Se a senha antiga estiver correta,
+                   transforma em hash.
+                */
+
+                if (passwordValid) {
+
+                    const salt =
+                        generateSalt();
+
+
+                    const passwordHash =
+                        await hashPassword(
+                            password,
+                            salt,
+                            PASSWORD_ITERATIONS
+                        );
+
+
+                    user.passwordHash =
+                        passwordHash;
+
+
+                    user.passwordSalt =
+                        arrayBufferToBase64(
+                            salt
+                        );
+
+
+                    user.passwordIterations =
+                        PASSWORD_ITERATIONS;
+
+
+                    delete user.password;
+
+
+                    saveUsers(users);
+
+                }
+
+            }
+
+
+
+            /* SENHA INCORRETA */
+
+            if (!passwordValid) {
+
+                showMessage(
+                    "E-mail ou senha incorretos.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+
+            /* CRIA SESSÃO */
+
+            createSession(user);
+
+
+
+            /* VAI PARA O DASHBOARD */
+
+            window.location.href =
+                "index.html";
+
+
+        } catch (error) {
+
+            console.error(
+                "Erro durante o login.",
+                error
+            );
+
+
+            showMessage(
+                "Não foi possível entrar. Tente novamente.",
+                "error"
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =========================
+   ALTERNAR FORMULÁRIOS
+========================= */
+
+switchButton.addEventListener(
+    "click",
+    () => {
+
+        if (
+            registerForm.classList.contains("hidden")
+        ) {
+
+            switchToRegister();
+
+        } else {
+
+            switchToLogin();
+
+        }
+
+    }
+);
+
+
+
+function switchToRegister() {
+
+    loginForm.classList.add("hidden");
+
+    registerForm.classList.remove("hidden");
+
+
+    formTitle.textContent =
+        "Crie sua conta";
+
+
+    formSubtitle.textContent =
+        "Cadastre-se para começar a controlar seu negócio.";
+
+
+    switchText.textContent =
+        "Já possui uma conta?";
+
+
+    switchButton.textContent =
+        "Entrar";
+
+
+    showMessage("");
+
+}
+
+
+
+function switchToLogin() {
+
+    registerForm.classList.add("hidden");
+
+    loginForm.classList.remove("hidden");
+
+
+    formTitle.textContent =
+        "Bem-vindo de volta!";
+
+
+    formSubtitle.textContent =
+        "Entre na sua conta para continuar.";
+
+
+    switchText.textContent =
+        "Ainda não possui uma conta?";
+
+
+    switchButton.textContent =
+        "Criar conta";
+
+
+    showMessage("");
+
+}
+
+
+
+/* =========================
+   VERIFICAÇÃO DE SESSÃO
+========================= */
+
+function hasValidSession() {
+
+    try {
+
+        const raw =
+            sessionStorage.getItem(
+                SESSION_KEY
+            );
+
+
+        if (!raw) {
+            return false;
+        }
+
+
+        const session =
+            JSON.parse(raw);
+
+
+        if (
+            !session ||
+            typeof session !== "object"
+        ) {
+
+            return false;
+
+        }
+
+
+        if (
+            typeof session.id !== "string" ||
+            session.id.length === 0
+        ) {
+
+            return false;
+
+        }
+
+
+        if (
+            typeof session.email !== "string" ||
+            session.email.length === 0
+        ) {
+
+            return false;
+
+        }
+
+
+        if (
+            !Number.isFinite(
+                Number(session.expiresAt)
+            )
+        ) {
+
+            return false;
+
+        }
+
+
+        if (
+            Number(session.expiresAt) <= Date.now()
+        ) {
+
+            sessionStorage.removeItem(
+                SESSION_KEY
+            );
+
+            return false;
+
+        }
+
+
+        return true;
+
+    } catch (error) {
+
+        sessionStorage.removeItem(
+            SESSION_KEY
+        );
+
+        return false;
+
+    }
+
+}
+
+
+
+/* =========================
+   REDIRECIONAMENTO
+========================= */
+
+if (hasValidSession()) {
+
+    window.location.href =
+        "index.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

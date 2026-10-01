@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background: #f2f8ff;
+    color: #071d49;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* ESQUERDA */
+
+.login-left {
+    width: 55%;
+    min-height: 100vh;
+    padding: 35px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        radial-gradient(circle at 80% 20%, rgba(64, 186, 255, .18), transparent 30%),
+        #f2f8ff;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: white;
+    font-size: 22px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #4062ff,
+        #40baff
+    );
+
+    box-shadow:
+        0 10px 25px rgba(64, 98, 255, .25);
+}
+
+.brand h2 {
+    font-size: 19px;
+}
+
+.brand span {
+    display: block;
+    color: #919eab;
+    font-size: 12px;
+}
+
+.login-content {
+    max-width: 650px;
+}
+
+.welcome {
+    color: #4062ff;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.login-content h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+.login-content h1 span {
+    display: block;
+    color: #4062ff;
+}
+
+.login-content p {
+    color: #718096;
+    font-size: 18px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.login-benefits {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-benefits div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #516173;
+}
+
+.login-benefits strong {
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e5f7ee;
+    color: #20bf6b;
+}
+
+.login-footer {
+    color: #9aa7b5;
+    font-size: 13px;
+}
+
+
+/* DIREITA */
+
+.login-right {
+    width: 45%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+}
+
+.login-box {
+    width: min(420px, 90%);
+}
+
+.mobile-brand {
+    display: none;
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #919eab;
+}
+
+
+/* FORM */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    height: 52px;
+
+    border: 1px solid #e1e7ef;
+    border-radius: 13px;
+
+    padding: 0 16px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition: .2s;
+}
+
+.input-group input:focus {
+    border-color: #4062ff;
+
+    box-shadow:
+        0 0 0 4px rgba(64, 98, 255, .10);
+}
+
+.main-button {
+    width: 100%;
+    height: 53px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        135deg,
+        #4062ff,
+        #40baff
+    );
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 25px rgba(64, 98, 255, .22);
+
+    transition: .2s;
+}
+
+.main-button:hover {
+    transform: translateY(-2px);
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 25px;
+
+    color: #919eab;
+    font-size: 14px;
+}
+
+.switch-form button {
+    border: none;
+    background: none;
+
+    color: #4062ff;
+
+    font-weight: 800;
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+.message {
+    min-height: 20px;
+    margin-top: 15px;
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.message.error {
+    color: #ff4757;
+}
+
+.message.success {
+    color: #20bf6b;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .login-left {
+        display: none;
+    }
+
+    .login-right {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .mobile-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        margin-bottom: 40px;
+    }
+
+    .mobile-brand h2 {
+        font-size: 21px;
+    }
+}
